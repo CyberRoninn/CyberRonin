@@ -118,7 +118,6 @@ CyberRonin (v2.1+) is a Python-based script that integrates with Google's Gemini
 3.  **Initial Prompts:**
     *   The script will display warnings about its experimental nature and API costs.
     *   If your API key is not found or invalid, it will offer to run in "MOCK AI" mode.
-    *   You'll be asked to type `understand risks` to proceed.
 
 4.  **Interacting with CyberRonin:**
 
