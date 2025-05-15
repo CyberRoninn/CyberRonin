@@ -92,7 +92,7 @@ CyberRonin (v2.1+) is a Python-based script that integrates with Google's Gemini
         ```
     *   **IMPORTANT:** Ensure your API key is kept secure and is enabled for the Gemini API. **Do not commit your `.env` file to Git!** Add `.env` to your `.gitignore` file.
 
-5.  **Make the Script Executable (Optional):**
+5.  **Make the Script Executable:**
     ```bash
     chmod +x ai_copilot_v2.py # Or your main script's filename
     ```
