@@ -1,6 +1,7 @@
 <div align="center">
   <!-- Replace placeholder_logo.png with your actual logo and uncomment the line below -->
-  <!-- <img src="placeholder_logo.png" alt="CyberRonin Logo" width="150"/> -->
+  <img src="placeholder_logo.png" alt="CyberRonin Logo" width="150"/>
+  
   <h1>CyberRonin: Your AI-Powered Linux Co-Pilot</h1>
   <p>
     <strong>Supercharge your Linux command-line experience with an intelligent AI assistant!</strong>
