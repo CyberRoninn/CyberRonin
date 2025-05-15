@@ -177,14 +177,12 @@ Session activity, AI prompts (snippets), and AI responses (snippets) are logged 
 This project is currently in an experimental phase. Contributions, suggestions, and bug reports are welcome! Please feel free to:
 *   Open an issue for bugs or feature requests.
 *   Fork the repository and submit a pull request.
-*(If you have specific contribution guidelines, add them here or link to a CONTRIBUTING.md file.)*
 
 ---
 
 ## ⚖️ License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-*(You'll need to add a `LICENSE` file with the MIT License text to your repository.)*
 
 ---
 
