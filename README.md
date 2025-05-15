@@ -31,8 +31,9 @@ CyberRonin is a Python-based script that integrates with Google's Gemini AI (or 
 
 1.  **Clone the Repository (or download the script):**
     ```bash
-   git clone https://github.com/elpazzo21/CyberRonin.git
-   cd  ai_copilot_v2.py
+   # If it were a git repo:
+    # git clone https://github.com/elpazzo21/CyberRonin.git
+    # cd ai_copilot_v2.py
     # For now, just save the script (e.g., ai_copilot_v2.1_env_debug.py) to a directory.
     ```
 
