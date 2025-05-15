@@ -1,5 +1,5 @@
 <div align="center">
-  <!-- Replace placeholder_logo.png with your actual logo if you have one -->
+  <!-- Replace placeholder_logo.png with your actual logo and uncomment the line below -->
   <!-- <img src="placeholder_logo.png" alt="CyberRonin Logo" width="150"/> -->
   <h1>CyberRonin: Your AI-Powered Linux Co-Pilot</h1>
   <p>
