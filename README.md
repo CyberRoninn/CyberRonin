@@ -1,10 +1,12 @@
 <div align="center">
-  <img src="placeholder_logo.png" alt="CyberRonin Logo" width="150"/> 
+  <!-- Replace placeholder_logo.png with your actual logo if you have one -->
+  <!-- <img src="placeholder_logo.png" alt="CyberRonin Logo" width="150"/> -->
   <h1>CyberRonin: Your AI-Powered Linux Co-Pilot</h1>
   <p>
     <strong>Supercharge your Linux command-line experience with an intelligent AI assistant!</strong>
   </p>
   <p>
+    <a href="#-demo">Demo</a> •
     <a href="#features">Features</a> •
     <a href="#prerequisites">Prerequisites</a> •
     <a href="#installation--setup">Installation</a> •
@@ -12,13 +14,14 @@
     <a href="#configuration">Configuration</a> •
     <a href="#future-development">Roadmap</a> •
     <a href="#contributing">Contributing</a> •
+    <a href="#license">License</a> •
     <a href="#disclaimer">Disclaimer</a>
   </p>
   <!-- Optional Badges:
   <p>
     <img src="https://img.shields.io/badge/Python-3.9+-blue.svg" alt="Python 3.9+">
     <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT">
-    <img src="https://img.shields.io/github/stars/CyberRoninn/CyberRonin?style=social" alt="GitHub Stars">
+    <img src="https://img.shields.io/github/stars/YOUR_USERNAME/YOUR_REPONAME?style=social" alt="GitHub Stars">
   </p>
   -->
 </div>
@@ -26,6 +29,15 @@
 ---
 
 CyberRonin (v2.1+) is a Python-based script that integrates with Google's Gemini AI (or other LLMs) to provide real-time explanations, suggestions, error troubleshooting, and natural language command translation directly in your terminal. It's designed to help both beginners learn Linux faster and empower experienced users to be more efficient and knowledgeable.
+
+---
+
+## 🎥 Demo
+
+See CyberRonin in action!
+
+[![Watch the CyberRonin Demo on YouTube](https://img.youtube.com/vi/C1ecfb2Xyzg/hqdefault.jpg)](https://youtube.com/shorts/C1ecfb2Xyzg?si=GUOG5Sxie45Vo7UX)
+<p align="center"><em>Click the image above to watch the demo on YouTube Shorts.</em></p>
 
 ---
 
@@ -60,10 +72,10 @@ CyberRonin (v2.1+) is a Python-based script that integrates with Google's Gemini
 
 1.  **Clone the Repository:**
     ```bash
-    git clone https://github.com/CyberRoninn/CyberRonin.git
-    cd CyberRonin
+    git clone https://github.com/YOUR_USERNAME/YOUR_REPONAME.git 
+    cd YOUR_REPONAME
     ```
-    *(Note: Replace `CyberRoninn/CyberRonin` with your actual GitHub username and repository name if different.)*
+    *(Ensure you update `YOUR_USERNAME/YOUR_REPONAME`.)*
 
 2.  **Create a Python Virtual Environment (Recommended):**
     ```bash
@@ -73,28 +85,24 @@ CyberRonin (v2.1+) is a Python-based script that integrates with Google's Gemini
     *(On Windows, use `copilot_env\Scripts\activate`)*
 
 3.  **Install Dependencies:**
+    *(Ensure a `requirements.txt` file is present in the repository)*
     ```bash
     pip install -r requirements.txt 
     ```
-    
-    Alternatively, install manually:
-    ```bash
-    pip install google-generativeai python-dotenv rich
-    ```
 
 4.  **Set up API Key:**
-    *   Create a file named `.env` in the root directory of the project (e.g., inside the `CyberRonin` folder).
+    *   Create a file named `.env` in the root directory of the project.
     *   Add your Google Gemini API key to it:
         ```env
         GOOGLE_API_KEY="YOUR_ACTUAL_GOOGLE_GEMINI_API_KEY"
         # Optional: Specify a different Gemini model
         # GOOGLE_AI_MODEL="gemini-1.0-pro"
         ```
-    *   **IMPORTANT:** Ensure your API key is kept secure and is enabled for the Gemini API. **Do not commit your `.env` file to Git!** Add `.env` to your `.gitignore` file.
+    *   **IMPORTANT:** Ensure your API key is kept secure and is enabled for the Gemini API. Add `.env` to your `.gitignore` file.
 
-5.  **Make the Script Executable:**
+5.  **Make the Script Executable (Optional):**
     ```bash
-    chmod +x ai_copilot_v2.py # Or your main script's filename
+    chmod +x ai_copilot_v2.py # Replace with your main script's filename
     ```
 
 ---
@@ -108,80 +116,76 @@ CyberRonin (v2.1+) is a Python-based script that integrates with Google's Gemini
 
 2.  **Run the Script:**
     ```bash
-    python3 ./ai_copilot_v2.py # Or your script's filename
-    ```
-    Or, if executable and in your PATH:
-    ```bash
-    # ./ai_copilot_v2.py 
+    python3 ./ai_copilot_v2.py # Replace with your main script's filename
     ```
 
 3.  **Initial Prompts:**
     *   The script will display warnings about its experimental nature and API costs.
     *   If your API key is not found or invalid, it will offer to run in "MOCK AI" mode.
+    *   You'll be asked to type `understand risks` to proceed.
 
 4.  **Interacting with CyberRonin:**
-
-    *   **Type Linux Commands:** Execute commands as you normally would. After execution, the AI will provide analysis and suggestions.
+    *   **Type Linux Commands:**
         ```bash
         root@localhost:~# ls -l /etc
         ```
-    *   **Ask Natural Language Questions:** Type your task description in plain English. The AI will attempt to translate it into a shell command for your approval.
+    *   **Ask Natural Language Questions:**
         ```bash
         root@localhost:~# find all log files in /var/log larger than 10MB
         ```
-    *   **Explicit AI Queries:** Use prefixes like `ai?`, `??`, `explain:` to ask specific questions about the last command or general Linux topics.
+    *   **Explicit AI Queries:** (Use prefixes `ai?`, `??`, `explain:`)
         ```bash
         root@localhost:~# ai? what are the permissions on that file?
-        root@localhost:~# explain: how does sudo work?
         ```
-    *   **Accepting AI Suggested Next Command:** If the AI suggests a command with `SUGGESTED_NEXT_COMMAND:`, it will appear in your next prompt like `(AI: <suggested_command>)`. Simply pressing Enter without typing anything else will execute that suggested command.
-    *   **Saving to Knowledge Base:** If the AI includes `KB_SUGGESTION:`, you'll be prompted to save it to your local KB.
+    *   **Accepting AI Suggested Next Command:** Press Enter if a suggestion appears like `(AI: <suggested_command>)`.
+    *   **Saving to Knowledge Base:** Confirm with 'y' when prompted after `KB_SUGGESTION:`.
     *   **Exiting:** Type `exit` or `quit`.
 
 ---
 
 ## ⚙️ Configuration
 
-*   **`.env` file:** For `GOOGLE_API_KEY` and `GOOGLE_AI_MODEL`. Located in the project root.
-*   **Script Globals:** Some settings like `AI_PROVIDER_NAME`, `KB_DIR_NAME`, `LOG_FILE` paths are defined as global variables within the script and can be adjusted there if needed. (A dedicated config file is planned for future development).
+*   **`.env` file:** For `GOOGLE_API_KEY` and `GOOGLE_AI_MODEL`.
+*   **Script Globals:** For `AI_PROVIDER_NAME`, `KB_DIR_NAME`, etc. (Config file planned).
 
 ---
 
 ## 🧠 System Prompt for AI
 
-The behavior of the AI is heavily guided by a detailed system prompt embedded within the script (`SYSTEM_PROMPT` variable). This prompt defines its persona ("CyberRonin"), operational rules, ethical guidelines, and expected output format. Modifying this prompt is the primary way to tune the AI's assistance.
+The AI's behavior is guided by the `SYSTEM_PROMPT` variable in the script. Modify this to tune AI assistance.
 
 ---
 
 ## 📝 Logging
 
-Session activity, AI prompts (snippets), and AI responses (snippets) are logged to a file within your Knowledge Base directory (e.g., `~/.ai_copilot_kb_v2_1/copilot_session_v2.x.x.log`). This log is invaluable for debugging, reviewing interactions, and understanding the AI's decision-making process.
+Session logs are in `~/.ai_copilot_kb_v2_1/copilot_session_v2.x.x.log` (versioned).
 
 ---
 
 ## 🔮 Future Development
 
-*   Support for more LLM providers (OpenAI, Anthropic, local models).
-*   Advanced Knowledge Base with semantic search capabilities.
-*   True "ghost text" autocompletion for AI suggestions using `prompt_toolkit`.
-*   Implementation of the `SEARCH_INTERNET:` directive for the AI.
-*   Dedicated configuration file (e.g., YAML or INI) for easier settings management.
-*   A basic plugin system for user-defined tools or actions.
-*   Enhanced context management for longer conversations.
+*   Support for more LLMs.
+*   Advanced KB with semantic search.
+*   True "ghost text" autocompletion (`prompt_toolkit`).
+*   Internet search capability.
+*   Dedicated configuration file.
+*   Plugin system.
 
 ---
 
 ## 🤝 Contributing
 
-This project is currently in an experimental phase. Contributions, suggestions, and bug reports are welcome! Please feel free to:
+This project is experimental. Contributions, suggestions, and bug reports are welcome!
 *   Open an issue for bugs or feature requests.
 *   Fork the repository and submit a pull request.
+*(Consider adding a `CONTRIBUTING.md` file.)*
 
 ---
 
 ## ⚖️ License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+*(Ensure you add a `LICENSE` file.)*
 
 ---
 
