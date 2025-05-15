@@ -73,10 +73,10 @@ See CyberRonin in action!
 
 1.  **Clone the Repository:**
     ```bash
-    git clone https://github.com/YOUR_USERNAME/YOUR_REPONAME.git 
-    cd YOUR_REPONAME
+    git clone https://github.com/CyberRoninn/CyberRonin
+
+    cd CyberRonin
     ```
-    *(Ensure you update `YOUR_USERNAME/YOUR_REPONAME`.)*
 
 2.  **Create a Python Virtual Environment (Recommended):**
     ```bash
