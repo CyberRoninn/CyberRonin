@@ -86,7 +86,7 @@ See CyberRonin in action!
     *(On Windows, use `copilot_env\Scripts\activate`)*
 
 3.  **Install Dependencies:**
-    *(Ensure a `requirements.txt` file is present in the repository)*
+    
     ```bash
     pip install -r requirements.txt 
     ```
@@ -123,7 +123,6 @@ See CyberRonin in action!
 3.  **Initial Prompts:**
     *   The script will display warnings about its experimental nature and API costs.
     *   If your API key is not found or invalid, it will offer to run in "MOCK AI" mode.
-    *   You'll be asked to type `understand risks` to proceed.
 
 4.  **Interacting with CyberRonin:**
     *   **Type Linux Commands:**
@@ -179,14 +178,12 @@ Session logs are in `~/.ai_copilot_kb_v2_1/copilot_session_v2.x.x.log` (versione
 This project is experimental. Contributions, suggestions, and bug reports are welcome!
 *   Open an issue for bugs or feature requests.
 *   Fork the repository and submit a pull request.
-*(Consider adding a `CONTRIBUTING.md` file.)*
 
 ---
 
 ## ⚖️ License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-*(Ensure you add a `LICENSE` file.)*
 
 ---
 
