@@ -123,7 +123,7 @@ Session activity, AI prompts, and AI responses are logged to a file within your 
 
 ## Contributing
 
-This project is currently in an experimental phase. Contributions, suggestions, and bug reports are welcome! (If this were a public repo, provide contribution guidelines here).
+This project is currently in an experimental phase. Contributions, suggestions, and bug reports are welcome!
 
 ## Disclaimer
 
