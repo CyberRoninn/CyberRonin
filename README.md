@@ -88,42 +88,46 @@ Installation & Setup
 
 1. Clone the Repository
 
+
+
 git clone https://github.com/CyberRoninn/CyberRonin.git
 cd CyberRonin
 
-
 2. Create a Python Virtual Environment (Recommended)
+
+
 
 python3 -m venv copilot_env
 source copilot_env/bin/activate
 
-
 3. Install Dependencies
+
+
 
 pip install google-generativeai python-dotenv rich
 
-
 4. Set up API Key
+
+
 
 Create a file named .env in the project root.
 
 Add your Google Gemini API key:
 
+
 GOOGLE_API_KEY="YOUR_GOOGLE_GEMINI_API_KEY"
 # Optional: specify a different Gemini model
 # GOOGLE_AI_MODEL="gemini-1.0-pro"
-
 
 > Note: Keep your API key secure and ensure it's enabled for the Gemini API.
 
 
 
-
 5. Make the Script Executable (Optional)
 
+
+
 chmod +x ai_copilot_v2.py
-
-
 
 
 ---
@@ -132,15 +136,19 @@ Usage
 
 1. Activate Virtual Environment (if used)
 
-source copilot_env/bin/activate
 
+
+source copilot_env/bin/activate
 
 2. Run the Script
 
+
+
 python3 ./ai_copilot_v2.py
 
-
 3. Initial Prompts
+
+
 
 The script displays warnings about experimental nature and API costs.
 
@@ -149,18 +157,22 @@ If the API key is missing or invalid, MOCK Mode is offered.
 Type understand risks to proceed.
 
 
-
 4. Interacting with CyberRonin
 
+
+
 Execute Commands: Run any Linux command; CyberRonin then explains or analyzes it.
+
 
 root@host:~# ls -l /etc
 
 Natural Language Queries: Describe tasks in plain English for command suggestions.
 
+
 root@host:~# find all log files in /var/log larger than 10MB
 
 AI Prefixes: Use ai?, ??, or explain: for targeted AI assistance.
+
 
 root@host:~# ai? what are the permissions on /etc/passwd?
 root@host:~# explain: how does sudo work?
@@ -170,8 +182,6 @@ Accepting Suggestions: Press Enter at the prompt to run the SUGGESTED_NEXT_COMMA
 Saving KB Snippets: Agree to save KB_SUGGESTION entries for future context.
 
 Exit: Type exit or quit.
-
-
 
 
 
