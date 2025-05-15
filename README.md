@@ -76,7 +76,7 @@ CyberRonin (v2.1+) is a Python-based script that integrates with Google's Gemini
     ```bash
     pip install -r requirements.txt 
     ```
-    *(You'll need to create a `requirements.txt` file listing: `google-generativeai`, `python-dotenv`, `rich`)*
+    
     Alternatively, install manually:
     ```bash
     pip install google-generativeai python-dotenv rich
